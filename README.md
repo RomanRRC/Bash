@@ -1,7 +1,7 @@
 # Bash
 В рамках курса я познакомился с основными командами для работы с файлами, разделами и HTTP-запросами, которые я хочу показать Вам ниже.
 
-Задание № 1
+## Задание № 1
 
 <table class="tableizer-table">
 <thead><tr class="tableizer-firstrow"><th>№</th><th>Команда</th><th>Описание</th></tr></thead><tbody>
@@ -32,5 +32,56 @@
  <tr><td>25</td><td>echo line33 >> file3.txt</td><td>&nbsp;</td></tr>
  <tr><td>26</td><td>cat file1.txt file3.txt</td><td>Просмотреть содержимое двух файлов (1 и 3) сразу</td></tr>
  <tr><td>27</td><td>nano file1.txt + manual replacement</td><td>Используя один из редакторов замените все строки в файле 1</td></tr>
+</tbody></table>
+
+## Задание № 2
+
+
+<table class="tableizer-table">
+<thead><tr class="tableizer-firstrow"><th>№</th><th>Команда</th><th>Описание</th></tr></thead><tbody>
+ <tr><td>1</td><td>mkdir test3 </td><td>Создать папку test 3</td></tr>
+ <tr><td>2</td><td>cd test3  </td><td>Перейти в папку</td></tr>
+ <tr><td>3</td><td>touch test3/file {4,5,6}.txt</td><td>Добавить в папку test 3 три файла 4, 5 и 6</td></tr>
+ <tr><td>4</td><td>echo row1, row2, row3, row4 > file4.txt</td><td>В каждом файле должно быть по 4 строки row1, row2, row3, row4</td></tr>
+ <tr><td>5</td><td>echo row1, row2, row3, row4 > file5.txt</td><td>&nbsp;</td></tr>
+ <tr><td>6</td><td>echo row1, row2, row3, row4 > file6.txt</td><td>&nbsp;</td></tr>
+ <tr><td>7</td><td>cat file{4,5,6}.txt</td><td>Проверка содержания файлов</td></tr>
+ <tr><td>8</td><td>grep "row2" 5.txt</td><td>Найдите строку row2 в файле 5</td></tr>
+ <tr><td>9</td><td>grep -R "row"</td><td>Найдите строку row в папке test3</td></tr>
+ <tr><td>10</td><td>grep -c "row" file6.txt</td><td>Посчитать сколько строк с содержимым row в файле 6</td></tr>
+ <tr><td>11</td><td>find 5.txt</td><td>Найдите файл 5 внутри папки test3</td></tr>
+ <tr><td>12</td><td>find . -name "file5.txt" -delete</td><td>Используя команду find, удалите файл 5</td></tr>
+ <tr><td>13</td><td>echo test >> file4.txt</td><td>Используя команду echo, добавьте слово test в файл 4</td></tr>
+ <tr><td>14</td><td>sed 's/test/fail/g' test3/file4.txt</td><td>Замените слово test в файле 4 на fail</td></tr>
+ <tr><td>15</td><td>echo test >> test3/file4.txt</td><td>Добавьте в файл 4 слово test так, чтобы сохранилось содержимое</td></tr>
+ <tr><td>16</td><td>ps aux</td><td>Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе</td></tr>
+ <tr><td>17</td><td>kill 666</td><td>Убейте процесс 666 в консоли</td></tr>
+ <tr><td>18</td><td>ping artsiomrusau.com</td><td>Узнайте доступность ресурса artsiomrusau.com, используя ping</td></tr>
+ <tr><td>19</td><td>ping -n 5 artsiomrusau.com</td><td>Отправьте 5 пакетов на сайт artsiomrusau.com</td></tr>
+ <tr><td>20</td><td>"curl -X 'GET' \  'https://petstore.swagger.io/v2/pet/112' \-H 'accept: application/json'"</td><td>Используя GET и команду curl, получите информацию о зарегистрированных питомцах на https://petstore.swagger.io/</td></tr>
+
+
+ <tr><td>21</td><td>curl -X 'POST' \
+  'https://petstore.swagger.io/v2/pet' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id":112,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}'</td><td> Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/</td></tr>
 </tbody></table>
 
